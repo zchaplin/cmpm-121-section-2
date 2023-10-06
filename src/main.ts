@@ -54,6 +54,7 @@ function RemoveJump()
 {
     dino?.classList.remove("jump")
     isJumping = false;
+    mainLoop = mainLoop //bug fix?
 }
 
 function RemoveObstacles()
