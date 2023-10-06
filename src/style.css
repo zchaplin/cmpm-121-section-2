@@ -1,0 +1,121 @@
+.game
+{
+  width: 600px;
+  height: 200px;
+  border: 1px solid  black;
+  margin: auto;
+  background-color:lightskyblue
+}
+
+#dino
+{
+  width: 50px;
+  height: 50px;
+  
+  background-image: url(img/guy.png);
+  background-size: 100px 50px;
+  background-position-x: 80px;
+
+  position: relative;
+  top: 150px;
+}
+
+.jump
+{
+  animation: jump .5s linear;
+}
+
+@keyframes jump
+{
+  0%
+  {
+    top: 150px;
+  }
+
+  35%
+  {
+    top: 50px;
+  }
+
+  65%
+  {
+    top: 50px;
+  }
+
+  100%
+  {
+    top: 150px;
+  }
+}
+
+#cactus
+{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 100px;
+  left: 660px;
+
+  background-image: url(img/cold.png);
+  background-size: 100px 50px;
+  background-position-x: 80px;
+}
+
+.cactusMove
+{
+  animation: cactusMove 2.5s linear infinite;
+}
+
+@keyframes cactusMove
+{
+  0%
+  {
+    left: 650px;
+  }
+
+  100%
+  {
+    left: -50px;
+  }
+}
+
+#bird
+{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -40px;
+  left: 750px;
+
+  background-image: url(img/clown.png);
+  background-size: 100px 50px;
+  background-position-x: 80px;
+}
+
+.birdMove
+{
+  animation: birdMove 4.5s linear infinite;
+}
+
+@keyframes birdMove
+{
+  0%
+  {
+    left: 750px;
+  }
+
+  100%
+  {
+    left: -60px;
+  }
+}
+
+
+#scoreText
+{
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
