@@ -12,7 +12,7 @@
   width: 50px;
   height: 50px;
   
-  background-image: url(assets/guy.png);
+  background-image: url(public/assets/guy.png);
   background-size: 100px 50px;
   background-position-x: 80px;
 
@@ -87,7 +87,7 @@
   top: -40px;
   left: 750px;
 
-  background-image: url(assets/clown.png);
+  background-image: url(public/assets/clown.png);
   background-size: 100px 50px;
   background-position-x: 80px;
 }
