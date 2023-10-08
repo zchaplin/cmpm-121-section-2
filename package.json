@@ -1,5 +1,5 @@
 {
-  "name": "project_2_vite",
+  "name": "cmpm-121-section-2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,10 +9,28 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
-  "dependencies": {
-    "@vitejs/plugin-vue": "^4.4.0"
-  }
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/naming-convention": [
+        "warn"
+      ]
+    }
+  },
+  "prettier": {}
 }
