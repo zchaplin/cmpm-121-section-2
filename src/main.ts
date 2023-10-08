@@ -11,13 +11,13 @@ let score = 0
 SetText("click to start!")
 
 
-let isJumping = false
-
+var isJumping = false
 let gameOver = true
-let mainLoop = setInterval(function () { Main()}, 10)
 
 document.addEventListener('click', () => jump())
 
+
+setInterval(function () { Main()}, 10)
 
 function Main()
 {
@@ -54,7 +54,7 @@ function RemoveJump()
 {
     dino?.classList.remove("jump")
     isJumping = false;
-    mainLoop = mainLoop //bug fix?
+    //mainLoop = mainLoop //bug fix?
 }
 
 function RemoveObstacles()
@@ -79,7 +79,7 @@ function CheckGameOver()
         let birdleft = parseInt(window.getComputedStyle(bird).getPropertyValue("left"))
 
         //detect cactus collision
-        if(dinoTop >= 150 && Math.abs(cactusleft) < 13)
+        if(dinoTop >= 150 && Math.abs(cactusleft) < 7)
         {
             //end game
             console.log("player died!")
@@ -94,7 +94,7 @@ function CheckGameOver()
         }
 
         //detect bird collision
-        if(dinoTop <= 55 && Math.abs(birdleft) < 13)
+        if(dinoTop <= 55 && Math.abs(birdleft) < 11)
         {
             //end game
             console.log("player died!")

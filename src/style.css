@@ -4,20 +4,30 @@
   height: 200px;
   border: 1px solid  black;
   margin: auto;
-  background-color:lightskyblue
+  background-color:lightskyblue;
+  overflow: hidden;
 }
+
+.gameContainer
+{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+
 
 #dino
 {
   width: 50px;
   height: 50px;
   
-  background-image: url(/public/assets/guy.png);
-  background-size: 100px 50px;
-  background-position-x: 80px;
+  background-image: url(/public/assets/dino.png);
+  background-size: 50px 50px;
 
   position: relative;
-  top: 150px;
+  top: 158px;
 }
 
 .jump
@@ -50,23 +60,26 @@
 
 #cactus
 {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
+
+  background-image: url(/public/assets/cactus.png);
+  background-size: 75px 75px;
+
+
   position: relative;
   top: 100px;
   left: 660px;
 
-  background-image: url(/public/assets/cold.png);
-  background-size: 100px 50px;
-  background-position-x: 80px;
+  
 }
 
 .cactusMove
 {
-  animation: cactusMove 2.5s linear infinite;
+  animation: cactusMoveAnimation 2.5s linear infinite;
 }
 
-@keyframes cactusMove
+@keyframes cactusMoveAnimation
 {
   0%
   {
@@ -87,9 +100,9 @@
   top: -40px;
   left: 750px;
 
-  background-image: url(/public/assets/clown.png);
-  background-size: 100px 50px;
-  background-position-x: 80px;
+  background-image: url(/public/assets/bird.png);
+  background-size: 50px 50px;
+  
 }
 
 .birdMove
