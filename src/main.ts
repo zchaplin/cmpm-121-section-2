@@ -14,8 +14,7 @@ SetText("click to start!")
 var isJumping = false
 let gameOver = true
 
-document.addEventListener('click', () => jump())
-
+document.addEventListener('mousedown', () => jump())
 
 setInterval(function () { Main()}, 10)
 
@@ -33,17 +32,13 @@ function Main()
 
 function jump()
 {
-    if(gameOver === false)
+    if(gameOver == false && isJumping == false)
     {
-        if(isJumping == false)
-        {
-            isJumping = true
-            dino?.classList.add("jump")
-            setTimeout(RemoveJump, 500)
-        }
+        isJumping = true
+        dino?.classList.add("jump")
+        setTimeout(RemoveJump, 500)
     }
-    else
-    {
+    else if (gameOver == true){
         StartGame();
     }
     
@@ -81,35 +76,29 @@ function CheckGameOver()
         //detect cactus collision
         if(dinoTop >= 150 && Math.abs(cactusleft) < 7)
         {
-            //end game
-            console.log("player died!")
-            SetText("Final Score: " + score + "! Click To Play Again!")
-            gameOver = true
-
-            //reset player
-            RemoveJump()
-            
-            //reset cactus
-            RemoveObstacles()
+            endGame()
         }
 
         //detect bird collision
         if(dinoTop <= 55 && Math.abs(birdleft) < 11)
         {
             //end game
-            console.log("player died!")
-            SetText("Final Score: " + score + "! Click To Play Again!")
-            gameOver = true
-
-            //reset player
-            RemoveJump()
-            
-            //reset cactus
-            RemoveObstacles()
+            endGame()
         }
     }
 }
+function endGame(){
+    //end game
+    console.log("player died!")
+    SetText("Final Score: " + score + "! Click To Play Again!")
+    gameOver = true
 
+    //reset player
+    RemoveJump()
+    
+    //reset cactus
+    RemoveObstacles()
+}
 
 function StartGame()
 {
