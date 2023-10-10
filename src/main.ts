@@ -10,13 +10,12 @@ const scoreText = document.getElementById("scoreText")
 let score = 0
 SetText("click to start!")
 
-
 let isJumping = false
 let gameOver = true
 
 document.addEventListener('mousedown', () => jump())
-
-setInterval(function () { Main() }, 10)
+let tickRate = 10
+setInterval(function () { Main() }, tickRate)
 
 function Main() {
     if (gameOver == false) {
